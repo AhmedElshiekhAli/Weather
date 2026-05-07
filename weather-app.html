@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WW⚡ Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- LEFT -->
+  <div class="left-panel" id="leftPanel">
+    <div class="bg-photo" id="bgPhoto"></div>
+    <canvas id="snowCanvas"></canvas>
+
+    <div class="logo">WW<span class="bolt">⚡</span></div>
+
+    <div class="left-content">
+      <div class="city-row">
+        <div class="temp-big" id="mainTemp">16°</div>
+        <div class="city-meta">
+          <div class="city-name" id="mainCity">London</div>
+          <div class="city-time" id="liveTime">--:-- · Loading...</div>
+        </div>
+        <svg class="weather-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 32a8 8 0 110-16c.34 0 .68.02 1.01.06A10 10 0 0134 22h1a7 7 0 010 14H14z"
+            fill="rgba(255,255,255,0.45)" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
+          <path d="M22 36l-2 4M28 36l-2 4M25 36l-2 4"
+            stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right-panel">
+
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="Search Location..." />
+      <i class="ti ti-search" id="searchBtn" aria-label="Search"></i>
+    </div>
+
+    <div class="section-label">Weather Details...</div>
+    <div class="condition-title" id="conditionTitle">Thunderstorm with Light Drizzle</div>
+
+    <div class="detail-row">
+      <span class="detail-label">Temp max</span>
+      <div class="detail-val-group">
+        <span class="detail-val" id="tempMax">19°</span>
+        <i class="ti ti-thermometer icon-hot"></i>
+      </div>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Temp min</span>
+      <div class="detail-val-group">
+        <span class="detail-val" id="tempMin">15°</span>
+        <i class="ti ti-thermometer icon-cold"></i>
+      </div>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Humidity</span>
+      <div class="detail-val-group">
+        <span class="detail-val" id="humidity">58%</span>
+        <i class="ti ti-droplet icon-teal"></i>
+      </div>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Cloudy</span>
+      <div class="detail-val-group">
+        <span class="detail-val" id="cloudiness">86%</span>
+        <i class="ti ti-cloud icon-muted"></i>
+      </div>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Wind</span>
+      <div class="detail-val-group">
+        <span class="detail-val" id="wind">5 km/h</span>
+        <i class="ti ti-wind icon-wind"></i>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-label">Today's Weather Forecast...</div>
+
+    <div id="forecastList">
+      <div class="forecast-item">
+        <div class="forecast-left">
+          <i class="ti ti-snowflake forecast-icon"></i>
+          <div>
+            <div class="forecast-time">09:00</div>
+            <div class="forecast-cond">Snow</div>
+          </div>
+        </div>
+        <div class="forecast-temp">19°</div>
+      </div>
+      <div class="forecast-item">
+        <div class="forecast-left">
+          <i class="ti ti-snowflake forecast-icon"></i>
+          <div>
+            <div class="forecast-time">12:00</div>
+            <div class="forecast-cond">Light Snow</div>
+          </div>
+        </div>
+        <div class="forecast-temp">17°</div>
+      </div>
+      <div class="forecast-item">
+        <div class="forecast-left">
+          <i class="ti ti-cloud-rain forecast-icon"></i>
+          <div>
+            <div class="forecast-time">15:00</div>
+            <div class="forecast-cond">Drizzle</div>
+          </div>
+        </div>
+        <div class="forecast-temp">16°</div>
+      </div>
+      <div class="forecast-item">
+        <div class="forecast-left">
+          <i class="ti ti-cloud-storm forecast-icon"></i>
+          <div>
+            <div class="forecast-time">18:00</div>
+            <div class="forecast-cond">Thunderstorm</div>
+          </div>
+        </div>
+        <div class="forecast-temp">15°</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
